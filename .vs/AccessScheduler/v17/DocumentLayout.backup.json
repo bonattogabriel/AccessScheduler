@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A17CF032-3E40-49A5-8AD1-FACCBDD8E1D4}|AccessScheduler.API\\AccessScheduler.API.csproj|c:\\users\\gabriel\\source\\repos\\accessscheduler\\accessscheduler.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A17CF032-3E40-49A5-8AD1-FACCBDD8E1D4}|AccessScheduler.API\\AccessScheduler.API.csproj|solutionrelative:accessscheduler.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A17CF032-3E40-49A5-8AD1-FACCBDD8E1D4}|AccessScheduler.API\\AccessScheduler.API.csproj|c:\\users\\gabriel\\source\\repos\\accessscheduler\\accessscheduler.api\\endpoints\\bookingendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A17CF032-3E40-49A5-8AD1-FACCBDD8E1D4}|AccessScheduler.API\\AccessScheduler.API.csproj|solutionrelative:accessscheduler.api\\endpoints\\bookingendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -67,14 +67,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler.API\\Program.cs",
-              "RelativeDocumentMoniker": "AccessScheduler.API\\Program.cs",
-              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler.API\\Program.cs",
-              "RelativeToolTip": "AccessScheduler.API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Title": "BookingEndpoints.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler.API\\Endpoints\\BookingEndpoints.cs",
+              "RelativeDocumentMoniker": "AccessScheduler.API\\Endpoints\\BookingEndpoints.cs",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler.API\\Endpoints\\BookingEndpoints.cs",
+              "RelativeToolTip": "AccessScheduler.API\\Endpoints\\BookingEndpoints.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-13T23:59:21.53Z",
+              "WhenOpened": "2025-08-14T17:11:54.303Z",
               "EditorCaption": ""
             }
           ]
