@@ -10,25 +10,25 @@ Sistema de agendamento de acessos com controle de concorrência otimista, desenv
 - **xUnit**
 - **Docker**
 
-#Executando com Docker
+# Executando com Docker
 
-###Pré-requisitos
+### Pré-requisitos
 
 - **Docker Desktop instalado e executando**
 - **Docker Compose (geralmente incluído no Docker Desktop)**
 
-###1. Clone o repositório
+### 1. Clone o repositório
 ```
 git clone <repository-url>
 cd AccessScheduler
 ```
 
-###2. Execute com Docker Compose
+### 2. Execute com Docker Compose
 ```
 docker-compose up --build -d
 ```
 
-###3. Acesse as aplicações
+### 3. Acesse as aplicações
 
--**API: http://localhost:7293/swagger **
--**Blazor App: http://localhost:7059 **
+-**API: http://localhost:7293/swagger**<br>
+-**Blazor App: http://localhost:7059**
