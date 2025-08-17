@@ -19,4 +19,9 @@ RUN dotnet publish "AccessScheduler.Blazor.csproj" -c Release -o /app/publish /p
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+
+ENV ASPNETCORE_URLS=http://+:8080
+ENV ASPNETCORE_ENVIRONMENT=Development
+ENV ASPNETCORE_HTTPS_PORT=
+
 ENTRYPOINT ["dotnet", "AccessScheduler.Blazor.dll"]

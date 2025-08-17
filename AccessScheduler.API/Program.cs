@@ -42,7 +42,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
+
 app.UseCors("AllowBlazor");
 
 app.MapBookingEndpoints();
@@ -55,9 +56,9 @@ using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
 
-    if (app.Environment.IsDevelopment())
+    try
     {
-        context.Database.EnsureCreated();
+        context.Database.Migrate();
 
         if (!context.Bookings.Any())
         {
@@ -65,7 +66,7 @@ using (var scope = app.Services.CreateScope())
                 new AccessScheduler.Shared.Models.Booking
                 {
                     Id = Guid.NewGuid(),
-                    CustomerName = "Jo„o Silva",
+                    CustomerName = "Jo√£o Silva",
                     Document = "12345678901",
                     Resource = "gate-1",
                     StartUtc = DateTime.UtcNow.AddHours(2),
@@ -78,6 +79,10 @@ using (var scope = app.Services.CreateScope())
             );
             context.SaveChanges();
         }
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Database migration error: {ex.Message}");
     }
 }
 

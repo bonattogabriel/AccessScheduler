@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A17CF032-3E40-49A5-8AD1-FACCBDD8E1D4}|AccessScheduler.API\\AccessScheduler.API.csproj|c:\\users\\gabriel\\source\\repos\\accessscheduler\\accessscheduler.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A17CF032-3E40-49A5-8AD1-FACCBDD8E1D4}|AccessScheduler.API\\AccessScheduler.API.csproj|solutionrelative:accessscheduler.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{FC371E5C-275E-4123-B276-4314A65445E3}|AccessScheduler\\AccessScheduler.Blazor.csproj|c:\\users\\gabriel\\source\\repos\\accessscheduler\\accessscheduler\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC371E5C-275E-4123-B276-4314A65445E3}|AccessScheduler\\AccessScheduler.Blazor.csproj|solutionrelative:accessscheduler\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC371E5C-275E-4123-B276-4314A65445E3}|AccessScheduler\\AccessScheduler.Blazor.csproj|c:\\users\\gabriel\\source\\repos\\accessscheduler\\accessscheduler\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC371E5C-275E-4123-B276-4314A65445E3}|AccessScheduler\\AccessScheduler.Blazor.csproj|solutionrelative:accessscheduler\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC371E5C-275E-4123-B276-4314A65445E3}|AccessScheduler\\AccessScheduler.Blazor.csproj|c:\\users\\gabriel\\source\\repos\\accessscheduler\\accessscheduler\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC371E5C-275E-4123-B276-4314A65445E3}|AccessScheduler\\AccessScheduler.Blazor.csproj|solutionrelative:accessscheduler\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC371E5C-275E-4123-B276-4314A65445E3}|AccessScheduler\\AccessScheduler.Blazor.csproj|c:\\users\\gabriel\\source\\repos\\accessscheduler\\accessscheduler\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC371E5C-275E-4123-B276-4314A65445E3}|AccessScheduler\\AccessScheduler.Blazor.csproj|solutionrelative:accessscheduler\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC371E5C-275E-4123-B276-4314A65445E3}|AccessScheduler\\AccessScheduler.Blazor.csproj|c:\\users\\gabriel\\source\\repos\\accessscheduler\\accessscheduler\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC371E5C-275E-4123-B276-4314A65445E3}|AccessScheduler\\AccessScheduler.Blazor.csproj|solutionrelative:accessscheduler\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC371E5C-275E-4123-B276-4314A65445E3}|AccessScheduler\\AccessScheduler.Blazor.csproj|c:\\users\\gabriel\\source\\repos\\accessscheduler\\accessscheduler\\components\\bookingform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC371E5C-275E-4123-B276-4314A65445E3}|AccessScheduler\\AccessScheduler.Blazor.csproj|solutionrelative:accessscheduler\\components\\bookingform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC371E5C-275E-4123-B276-4314A65445E3}|AccessScheduler\\AccessScheduler.Blazor.csproj|c:\\users\\gabriel\\source\\repos\\accessscheduler\\accessscheduler\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC371E5C-275E-4123-B276-4314A65445E3}|AccessScheduler\\AccessScheduler.Blazor.csproj|solutionrelative:accessscheduler\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B22524F8-59BC-4E1A-8696-1C9DEDF4B952}|Solution Items{B22524F8-59BC-4E1A-8696-1C9DEDF4B952}|C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -54,44 +78,24 @@
       "RelativeMoniker": "D:0:0:{BE00C779-2EC7-402A-8546-BCF79548B2C2}|AccessScheduler.Shared\\AccessScheduler.Shared.csproj|solutionrelative:accessscheduler.shared\\dtos\\geolocationposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler\\Components\\Layout\\NavMenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AccessScheduler\\Components\\Layout\\NavMenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FC371E5C-275E-4123-B276-4314A65445E3}|AccessScheduler\\AccessScheduler.Blazor.csproj|c:\\users\\gabriel\\source\\repos\\accessscheduler\\accessscheduler\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FC371E5C-275E-4123-B276-4314A65445E3}|AccessScheduler\\AccessScheduler.Blazor.csproj|solutionrelative:accessscheduler\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler\\Components\\Layout\\MainLayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AccessScheduler\\Components\\Layout\\MainLayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FC371E5C-275E-4123-B276-4314A65445E3}|AccessScheduler\\AccessScheduler.Blazor.csproj|c:\\users\\gabriel\\source\\repos\\accessscheduler\\accessscheduler\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC371E5C-275E-4123-B276-4314A65445E3}|AccessScheduler\\AccessScheduler.Blazor.csproj|solutionrelative:accessscheduler\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler\\Components\\Routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AccessScheduler\\Components\\Routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FC371E5C-275E-4123-B276-4314A65445E3}|AccessScheduler\\AccessScheduler.Blazor.csproj|c:\\users\\gabriel\\source\\repos\\accessscheduler\\accessscheduler\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC371E5C-275E-4123-B276-4314A65445E3}|AccessScheduler\\AccessScheduler.Blazor.csproj|solutionrelative:accessscheduler\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler\\Components\\App.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AccessScheduler\\Components\\App.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FC371E5C-275E-4123-B276-4314A65445E3}|AccessScheduler\\AccessScheduler.Blazor.csproj|c:\\users\\gabriel\\source\\repos\\accessscheduler\\accessscheduler\\wwwroot\\js\\geolocation.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FC371E5C-275E-4123-B276-4314A65445E3}|AccessScheduler\\AccessScheduler.Blazor.csproj|solutionrelative:accessscheduler\\wwwroot\\js\\geolocation.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AccessScheduler\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AccessScheduler\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler\\Services\\ApiService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AccessScheduler\\Services\\ApiService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler\\wwwroot\\js\\geolocation.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AccessScheduler\\wwwroot\\js\\geolocation.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler\\Components\\BookingForm.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AccessScheduler\\Components\\BookingForm.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler\\Services\\GeolocationService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AccessScheduler\\Services\\GeolocationService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC371E5C-275E-4123-B276-4314A65445E3}|AccessScheduler\\AccessScheduler.Blazor.csproj|c:\\users\\gabriel\\source\\repos\\accessscheduler\\accessscheduler\\services\\geolocationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC371E5C-275E-4123-B276-4314A65445E3}|AccessScheduler\\AccessScheduler.Blazor.csproj|solutionrelative:accessscheduler\\services\\geolocationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -101,8 +105,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 19,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "AccessScheduler\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "AccessScheduler\\Components\\Pages\\Home.razor",
+              "ViewState": "AgIAABYAAAAAAAAAAAAkwC0AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-17T14:39:59.857Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
@@ -153,20 +170,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler.API\\Dockerfile",
-              "RelativeDocumentMoniker": "AccessScheduler.API\\Dockerfile",
-              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler.API\\Dockerfile",
-              "RelativeToolTip": "AccessScheduler.API\\Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-08-17T13:58:50.45Z",
+              "DocumentIndex": 2,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler\\Components\\_Imports.razor",
+              "RelativeDocumentMoniker": "AccessScheduler\\Components\\_Imports.razor",
+              "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler\\Components\\_Imports.razor",
+              "RelativeToolTip": "AccessScheduler\\Components\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-17T14:38:55.731Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "BookingValidatorTests.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler.Tests\\BookingValidatorTests.cs",
               "RelativeDocumentMoniker": "AccessScheduler.Tests\\BookingValidatorTests.cs",
@@ -178,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "BookingServiceTests.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler.Tests\\BookingServiceTests.cs",
               "RelativeDocumentMoniker": "AccessScheduler.Tests\\BookingServiceTests.cs",
@@ -190,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "docker-compose.yml",
               "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\docker-compose.yml",
               "RelativeDocumentMoniker": "docker-compose.yml",
@@ -198,11 +215,12 @@
               "RelativeToolTip": "docker-compose.yml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-08-17T13:39:24.877Z"
+              "WhenOpened": "2025-08-17T13:39:24.877Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": ".editorconfig",
               "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\.editorconfig",
               "RelativeDocumentMoniker": ".editorconfig",
@@ -214,7 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler.API\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "AccessScheduler.API\\Data\\AppDbContext.cs",
@@ -226,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "Booking.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler.Shared\\Models\\Booking.cs",
               "RelativeDocumentMoniker": "AccessScheduler.Shared\\Models\\Booking.cs",
@@ -238,7 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "ExecutionContext.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel\\AppData\\Local\\Temp\\.vsdbgsrc\\4dcf567db33b8407e8e7e85491df71d46c06985d33f5ad8d904e52c3b325c6c5\\ExecutionContext.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\4dcf567db33b8407e8e7e85491df71d46c06985d33f5ad8d904e52c3b325c6c5\\ExecutionContext.cs",
@@ -246,11 +264,12 @@
               "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\4dcf567db33b8407e8e7e85491df71d46c06985d33f5ad8d904e52c3b325c6c5\\ExecutionContext.cs",
               "ViewState": "AgIAAHQAAAAAAAAAAAApwI8AAAACAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T17:26:16.775Z"
+              "WhenOpened": "2025-08-15T17:26:16.775Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "DateTimeExtensions.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler.Shared\\Extensions\\DateTimeExtensions.cs",
               "RelativeDocumentMoniker": "AccessScheduler.Shared\\Extensions\\DateTimeExtensions.cs",
@@ -262,19 +281,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 1,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler\\Components\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "AccessScheduler\\Components\\Layout\\NavMenu.razor",
               "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler\\Components\\Layout\\NavMenu.razor",
               "RelativeToolTip": "AccessScheduler\\Components\\Layout\\NavMenu.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAkwCIAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-15T16:18:11.642Z"
+              "WhenOpened": "2025-08-15T16:18:11.642Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 6,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler\\Components\\Layout\\MainLayout.razor",
               "RelativeDocumentMoniker": "AccessScheduler\\Components\\Layout\\MainLayout.razor",
@@ -282,11 +302,12 @@
               "RelativeToolTip": "AccessScheduler\\Components\\Layout\\MainLayout.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-15T15:38:32.988Z"
+              "WhenOpened": "2025-08-15T15:38:32.988Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 3,
               "Title": "Routes.razor",
               "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler\\Components\\Routes.razor",
               "RelativeDocumentMoniker": "AccessScheduler\\Components\\Routes.razor",
@@ -294,11 +315,12 @@
               "RelativeToolTip": "AccessScheduler\\Components\\Routes.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-15T15:38:28.441Z"
+              "WhenOpened": "2025-08-15T15:38:28.441Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 4,
               "Title": "App.razor",
               "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler\\Components\\App.razor",
               "RelativeDocumentMoniker": "AccessScheduler\\Components\\App.razor",
@@ -306,11 +328,12 @@
               "RelativeToolTip": "AccessScheduler\\Components\\App.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-15T15:38:22.497Z"
+              "WhenOpened": "2025-08-15T15:38:22.497Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler\\appsettings.json",
               "RelativeDocumentMoniker": "AccessScheduler\\appsettings.json",
@@ -318,11 +341,12 @@
               "RelativeToolTip": "AccessScheduler\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-15T15:14:16.307Z"
+              "WhenOpened": "2025-08-15T15:14:16.307Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler\\Program.cs",
               "RelativeDocumentMoniker": "AccessScheduler\\Program.cs",
@@ -330,11 +354,12 @@
               "RelativeToolTip": "AccessScheduler\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T15:08:18.086Z"
+              "WhenOpened": "2025-08-15T15:08:18.086Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler.API\\Program.cs",
               "RelativeDocumentMoniker": "AccessScheduler.API\\Program.cs",
@@ -346,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "ApiService.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler\\Services\\ApiService.cs",
               "RelativeDocumentMoniker": "AccessScheduler\\Services\\ApiService.cs",
@@ -354,11 +379,12 @@
               "RelativeToolTip": "AccessScheduler\\Services\\ApiService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwBkAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T15:02:03.461Z"
+              "WhenOpened": "2025-08-15T15:02:03.461Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "BookingService.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler.API\\Services\\BookingService.cs",
               "RelativeDocumentMoniker": "AccessScheduler.API\\Services\\BookingService.cs",
@@ -370,7 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "BookingEndpoints.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler.API\\Endpoints\\BookingEndpoints.cs",
               "RelativeDocumentMoniker": "AccessScheduler.API\\Endpoints\\BookingEndpoints.cs",
@@ -382,7 +408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "GeolocationPosition.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler.Shared\\DTOs\\GeolocationPosition.cs",
               "RelativeDocumentMoniker": "AccessScheduler.Shared\\DTOs\\GeolocationPosition.cs",
@@ -394,7 +420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "geolocation.js",
               "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler\\wwwroot\\js\\geolocation.js",
               "RelativeDocumentMoniker": "AccessScheduler\\wwwroot\\js\\geolocation.js",
@@ -402,23 +428,25 @@
               "RelativeToolTip": "AccessScheduler\\wwwroot\\js\\geolocation.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-08-15T00:49:45.028Z"
+              "WhenOpened": "2025-08-15T00:49:45.028Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 5,
               "Title": "BookingForm.razor",
               "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler\\Components\\BookingForm.razor",
               "RelativeDocumentMoniker": "AccessScheduler\\Components\\BookingForm.razor",
               "ToolTip": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler\\Components\\BookingForm.razor",
               "RelativeToolTip": "AccessScheduler\\Components\\BookingForm.razor",
-              "ViewState": "AgIAAPAAAAAAAAAAAADwvwsBAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAP0AAAAAAAAAAAAwwAsBAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-14T23:46:49.336Z"
+              "WhenOpened": "2025-08-14T23:46:49.336Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "GeolocationService.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler\\Services\\GeolocationService.cs",
               "RelativeDocumentMoniker": "AccessScheduler\\Services\\GeolocationService.cs",
@@ -426,7 +454,8 @@
               "RelativeToolTip": "AccessScheduler\\Services\\GeolocationService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T23:44:50.969Z"
+              "WhenOpened": "2025-08-14T23:44:50.969Z",
+              "EditorCaption": ""
             }
           ]
         },

@@ -17,7 +17,7 @@ services:
   api:
     build:
       context: .
-      dockerfile: src/AccessScheduler.Api/Dockerfile
+      dockerfile: Dockerfile.api
     container_name: access-scheduler-api
     ports:
       - "7293:8080"
@@ -26,21 +26,23 @@ services:
     environment:
       - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=AccessSchedulerDb;User Id=sa;Password=AccessScheduler123!;TrustServerCertificate=true
       - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080
+      - ASPNETCORE_HTTPS_PORT=
     networks:
       - access-scheduler-network
 
   blazor:
     build:
       context: .
-      dockerfile: src/AccessScheduler.Blazor/Dockerfile
+      dockerfile: Dockerfile.blazor
     container_name: access-scheduler-blazor
     ports:
       - "7059:8080"
-    depends_on:
-      - api
     environment:
-      - ApiBaseUrl=http://api:8080/
       - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080
+      - ASPNETCORE_HTTPS_PORT=
+      - ASPNETCORE_FORWARDEDHEADERS_ENABLED=true
     networks:
       - access-scheduler-network
 
