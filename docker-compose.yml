@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: access-scheduler-db
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=AccessScheduler123!
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqldata:/var/opt/mssql
+    networks:
+      - access-scheduler-network
+
+  api:
+    build:
+      context: .
+      dockerfile: src/AccessScheduler.Api/Dockerfile
+    container_name: access-scheduler-api
+    ports:
+      - "7293:8080"
+    depends_on:
+      - sqlserver
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=AccessSchedulerDb;User Id=sa;Password=AccessScheduler123!;TrustServerCertificate=true
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+      - access-scheduler-network
+
+  blazor:
+    build:
+      context: .
+      dockerfile: src/AccessScheduler.Blazor/Dockerfile
+    container_name: access-scheduler-blazor
+    ports:
+      - "7059:8080"
+    depends_on:
+      - api
+    environment:
+      - ApiBaseUrl=http://api:8080/
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+      - access-scheduler-network
+
+volumes:
+  sqldata:
+
+networks:
+  access-scheduler-network:
+    driver: bridge
