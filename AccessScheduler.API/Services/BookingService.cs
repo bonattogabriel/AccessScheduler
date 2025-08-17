@@ -21,6 +21,21 @@ public class BookingService : IBookingService
         _logger = logger;
     }
 
+    public async Task<bool> CancelBookingAsync(Guid bookingId)
+    {
+        var booking = await _context.Bookings.FindAsync(bookingId);
+        if (booking == null)
+            return false;
+
+        _context.Bookings.Remove(booking);
+        var result = await _context.SaveChangesAsync();
+
+        if (result > 0)
+            _logger.LogInformation("Booking cancelled successfully: {BookingId}", bookingId);
+
+        return result > 0;
+    }
+
     public async Task<BookingResponse> CreateBookingAsync(BookingRequest request, string timeZoneId)
     {
         var (isValid, errorMessage) = BookingValidator.ValidateBookingRequest(request);
@@ -105,24 +120,9 @@ public class BookingService : IBookingService
         }
     }
 
-    public async Task<bool> CancelBookingAsync(Guid bookingId)
-    {
-        var booking = await _context.Bookings.FindAsync(bookingId);
-        if (booking == null)
-            return false;
-
-        _context.Bookings.Remove(booking);
-        var result = await _context.SaveChangesAsync();
-
-        if (result > 0)
-            _logger.LogInformation("Booking cancelled successfully: {BookingId}", bookingId);
-
-        return result > 0;
-    }
-
     public async Task<List<FreeSlot>> GetFreeSlotsAsync(DateTime date, int durationMinutes, string resource, string timeZoneId)
     {
-        var startOfDay = date.Date.ConvertToUtc(timeZoneId);
+        var startOfDay = date.Date == DateTime.Now.Date ? date.ConvertToUtc(timeZoneId) : date.Date.ConvertToUtc(timeZoneId);
         var endOfDay = date.Date.AddDays(1).ConvertToUtc(timeZoneId);
 
         var bookings = await _context.Bookings
@@ -138,7 +138,11 @@ public class BookingService : IBookingService
         var workingStartUtc = date.Date.AddHours(8).ConvertToUtc(timeZoneId);
         var workingEndUtc = date.Date.AddHours(18).ConvertToUtc(timeZoneId);
 
-        var currentTime = DateTimeExtensions.MaxDateTime(workingStartUtc, startOfDay);
+        var minimumTimeUtc = date.Date == DateTime.Now.Date
+            ? DateTimeExtensions.MaxDateTime(workingStartUtc, DateTime.UtcNow)
+            : workingStartUtc;
+
+        var currentTime = DateTimeExtensions.MaxDateTime(minimumTimeUtc, startOfDay);
         var endTime = DateTimeExtensions.MinDateTime(workingEndUtc, endOfDay);
 
         foreach (var booking in bookings)
@@ -148,7 +152,7 @@ public class BookingService : IBookingService
                 var availableEnd = DateTimeExtensions.MinDateTime(booking.StartUtc, endTime);
                 if ((availableEnd - currentTime).TotalMinutes >= durationMinutes)
                 {
-                    GenerateSlotsInRange(currentTime, availableEnd, durationMinutes, resource, timeZoneId, freeSlots);
+                    GenerateSlotsInRange(currentTime, availableEnd, durationMinutes, resource, timeZoneId, freeSlots, date.Date == DateTime.Now.Date);
                 }
             }
             currentTime = DateTimeExtensions.MaxDateTime(currentTime, booking.EndUtc);
@@ -156,10 +160,67 @@ public class BookingService : IBookingService
 
         if (currentTime < endTime && (endTime - currentTime).TotalMinutes >= durationMinutes)
         {
-            GenerateSlotsInRange(currentTime, endTime, durationMinutes, resource, timeZoneId, freeSlots);
+            GenerateSlotsInRange(currentTime, endTime, durationMinutes, resource, timeZoneId, freeSlots, date.Date == DateTime.Now.Date);
         }
 
         return freeSlots;
+    }
+
+    private void GenerateSlotsInRange(DateTime startUtc, DateTime endUtc, int durationMinutes,
+            string resource, string timeZoneId, List<FreeSlot> freeSlots, bool isToday)
+    {
+        var startLocal = startUtc.ConvertFromUtc(timeZoneId);
+        var endLocal = endUtc.ConvertFromUtc(timeZoneId);
+
+        DateTime slotStart;
+        if (isToday)
+        {
+            var now = DateTime.Now;
+            var minutes = now.Minute <= 30 ? 30 : 60;
+            slotStart = new DateTime(now.Year, now.Month, now.Day, now.Hour, 0, 0).AddMinutes(minutes);
+
+            if (slotStart < startLocal)
+            {
+                slotStart = GetNextSlotTime(startLocal);
+            }
+        }
+        else
+        {
+            slotStart = GetNextSlotTime(startLocal);
+        }
+
+        while (slotStart.AddMinutes(durationMinutes) <= endLocal)
+        {
+            if (!isToday || slotStart > DateTime.Now)
+            {
+                freeSlots.Add(new FreeSlot
+                {
+                    Start = slotStart,
+                    End = slotStart.AddMinutes(durationMinutes),
+                    Resource = resource
+                });
+            }
+
+            slotStart = slotStart.AddMinutes(30);
+        }
+    }
+
+    private DateTime GetNextSlotTime(DateTime time)
+    {
+        var minutes = time.Minute;
+
+        if (minutes == 0 || minutes == 30)
+        {
+            return new DateTime(time.Year, time.Month, time.Day, time.Hour, minutes, 0);
+        }
+        else if (minutes < 30)
+        {
+            return new DateTime(time.Year, time.Month, time.Day, time.Hour, 30, 0);
+        }
+        else
+        {
+            return new DateTime(time.Year, time.Month, time.Day, time.Hour, 0, 0).AddHours(1);
+        }
     }
 
     public async Task<List<TimeSlot>> GetAlternativeSlotsAsync(string resource, DateTime startUtc, DateTime endUtc)
@@ -175,23 +236,5 @@ public class BookingService : IBookingService
             .OrderBy(slot => Math.Abs((slot.Start - startUtc.ConvertFromUtc(timeZoneId)).Ticks))
             .Take(3)
             .ToList();
-    }
-
-    private void GenerateSlotsInRange(DateTime startUtc, DateTime endUtc, int durationMinutes,
-        string resource, string timeZoneId, List<FreeSlot> freeSlots)
-    {
-        var current = startUtc;
-
-        while (current.AddMinutes(durationMinutes) <= endUtc)
-        {
-            freeSlots.Add(new FreeSlot
-            {
-                Start = current.ConvertFromUtc(timeZoneId),
-                End = current.AddMinutes(durationMinutes).ConvertFromUtc(timeZoneId),
-                Resource = resource
-            });
-
-            current = current.AddMinutes(30);
-        }
     }
 }

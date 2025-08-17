@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AccessScheduler.Blazor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77698c76659ba77390d618d459de3abeccff14d5")]
 [assembly: System.Reflection.AssemblyProductAttribute("AccessScheduler.Blazor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AccessScheduler.Blazor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

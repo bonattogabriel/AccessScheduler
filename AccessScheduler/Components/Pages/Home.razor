@@ -1,7 +1,71 @@
 ﻿@page "/"
+@using AccessScheduler.Blazor.Components
+@using AccessScheduler.Shared.DTOs
 
-<PageTitle>Home</PageTitle>
+<PageTitle>Agendador de Acessos</PageTitle>
 
-<h1>Hello, world!</h1>
+<div class="row">
+    <div class="col-lg-8">
+        <BookingForm />
+    </div>
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="card-header">
+                <h4>📋 Instruções</h4>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-info">
+                    <h6>🔄 Teste de Concorrência</h6>
+                    <p class="small mb-1">
+                        Use o botão "Nova Sessão" no topo da página para abrir uma segunda aba/janela.
+                    </p>
+                    <p class="small mb-0">
+                        Tente reservar o mesmo horário em ambas as janelas para testar o controle de concorrência.
+                    </p>
+                </div>
 
-Welcome to your new app.
+                <div class="alert alert-warning">
+                    <h6>📷 Captura de Foto</h6>
+                    <p class="small mb-1">
+                        Faça upload de uma imagem (JPEG/PNG, máx 1MB).
+                    </p>
+                    <p class="small mb-0">
+                        A localização será obtida automaticamente do seu navegador.
+                    </p>
+                </div>
+
+                <div class="alert alert-success">
+                    <h6>⏰ Horários Disponíveis</h6>
+                    <p class="small mb-1">
+                        Funcionamento: 8h às 18h
+                    </p>
+                    <p class="small mb-0">
+                        Slots de 30 em 30 minutos, duração configurável.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mt-3">
+            <div class="card-header">
+                <h4>🎯 Recursos Disponíveis</h4>
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Portão 1 (gate-1)
+                        <span class="badge bg-success rounded-pill">Ativo</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Portão 2 (gate-2)
+                        <span class="badge bg-success rounded-pill">Ativo</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Portão 3 (gate-3)
+                        <span class="badge bg-success rounded-pill">Ativo</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

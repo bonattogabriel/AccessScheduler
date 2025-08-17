@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "AccessScheduler.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/AccessScheduler.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AccessScheduler.Shared.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "AccessScheduler.Shared/1.0.0": {
+      "type": "project",
+      "path": "../AccessScheduler.Shared/AccessScheduler.Shared.csproj",
+      "msbuildProject": "../AccessScheduler.Shared/AccessScheduler.Shared.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "AccessScheduler.Shared >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Gabriel\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler.Shared\\AccessScheduler.Shared.csproj": {
+              "projectPath": "C:\\Users\\Gabriel\\source\\repos\\AccessScheduler\\AccessScheduler.Shared\\AccessScheduler.Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

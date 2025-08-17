@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.11.35431.28
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccessScheduler.Blazor", "AccessScheduler\AccessScheduler.Blazor.csproj", "{FC371E5C-275E-4123-B276-4314A65445E3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BE00C779-2EC7-402A-8546-BCF79548B2C2} = {BE00C779-2EC7-402A-8546-BCF79548B2C2}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1555CD70-CDD1-4EB8-9D7C-59B9AA49438E}"
 EndProject

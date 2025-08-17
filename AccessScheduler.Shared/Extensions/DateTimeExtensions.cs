@@ -1,16 +1,20 @@
-﻿namespace AccessScheduler.Shared.Extensions;
+﻿using System;
+
+namespace AccessScheduler.Shared.Extensions;
 
 public static class DateTimeExtensions
 {
     public static DateTime ConvertToUtc(this DateTime dateTime, string timeZoneId)
     {
         var timeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById(timeZoneId);
+        dateTime = DateTime.SpecifyKind(dateTime, DateTimeKind.Unspecified);
         return TimeZoneInfo.ConvertTimeToUtc(dateTime, timeZoneInfo);
     }
 
     public static DateTime ConvertFromUtc(this DateTime utcDateTime, string timeZoneId)
     {
         var timeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById(timeZoneId);
+        utcDateTime = DateTime.SpecifyKind(utcDateTime, DateTimeKind.Utc);
         return TimeZoneInfo.ConvertTimeFromUtc(utcDateTime, timeZoneInfo);
     }
 

@@ -1,0 +1,307 @@
+﻿@rendermode InteractiveServer
+@using AccessScheduler.Shared.DTOs
+@using AccessScheduler.Blazor.Services
+@inject ApiService ApiService
+@inject GeolocationService GeolocationService
+@inject IJSRuntime JSRuntime
+
+<div class="card">
+    <div class="card-header">
+        <h3>Nova Reserva</h3>
+    </div>
+    <div class="card-body">
+        <EditForm Model="bookingRequest" OnValidSubmit="HandleSubmit">
+            <DataAnnotationsValidator />
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label">Nome do Cliente</label>
+                        <InputText @bind-Value="bookingRequest.CustomerName" class="form-control" />
+                        <ValidationMessage For="() => bookingRequest.CustomerName" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label">Documento</label>
+                        <InputText @bind-Value="bookingRequest.Document" class="form-control" />
+                        <ValidationMessage For="() => bookingRequest.Document" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label">Recurso</label>
+                        <InputSelect @bind-Value="bookingRequest.Resource" class="form-select">
+                            <option value=""></option>
+                            <option value="gate-1">Portão 1</option>
+                            <option value="gate-2">Portão 2</option>
+                            <option value="gate-3">Portão 3</option>
+                        </InputSelect>
+                        <ValidationMessage For="() => bookingRequest.Resource" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label">Data e Hora</label>
+                        <InputDate @bind-Value="selectedDate" class="form-control" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label">Horário de Início</label>
+                        <select @bind="selectedStartTime" @onclick="LoadAvailableSlots" class="form-select">
+                            <option value=""></option>
+                            @foreach (var slot in availableSlots)
+                            {
+                                <option value="@slot.Start.TimeOfDay">@slot.Start.ToString("HH:mm")</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label">Duração (minutos)</label>
+                        <InputNumber @bind-Value="duration" class="form-control" min="15" max="480" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Foto</label>
+                <InputFile OnChange="HandleFileSelected" accept="image/*" class="form-control" />
+                @if (!string.IsNullOrEmpty(imagePreview))
+                {
+                    <div class="mt-2">
+                        <img src="@imagePreview" alt="Preview" style="max-width: 200px; max-height: 200px;" />
+                    </div>
+                }
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label">Latitude</label>
+                        <InputNumber @bind-Value="bookingRequest.Latitude" class="form-control" readonly />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label">Longitude</label>
+                        <InputNumber @bind-Value="bookingRequest.Longitude" class="form-control" readonly />
+                        <button type="button" @onclick="GetCurrentLocation" class="btn btn-sm btn-outline-primary mt-1">
+                            Obter Localização
+                            @if (isGettingLocation)
+                            {
+                            <span class="spinner-border spinner-border-sm me-2"></span>
+                            }
+                        </button>
+                        @if (!string.IsNullOrEmpty(locationStatus))
+                        {
+                            <div class="mt-1 small text-info">@locationStatus</div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            @if (!string.IsNullOrEmpty(errorMessage))
+            {
+                <div class="alert alert-danger">@errorMessage</div>
+            }
+
+            @if (!string.IsNullOrEmpty(successMessage))
+            {
+                <div class="alert alert-success">@successMessage</div>
+            }
+
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary" disabled="@isSubmitting">
+                    @if (isSubmitting)
+                    {
+                        <span class="spinner-border spinner-border-sm me-2"></span>
+                    }
+                    Reservar
+                </button>
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+@if (conflictResponse != null)
+{
+    <div class="card mt-3">
+        <div class="card-header bg-warning">
+            <h4>Conflito de Horário</h4>
+        </div>
+        <div class="card-body">
+            <p>@conflictResponse.Message</p>
+
+            @if (conflictResponse.ConflictWith != null)
+            {
+                <p><strong>Conflito com:</strong> Reserva das @conflictResponse.ConflictWith.Start.ToString("HH:mm") às @conflictResponse.ConflictWith.End.ToString("HH:mm")</p>
+            }
+
+            <h5>Horários Alternativos:</h5>
+            <div class="d-flex gap-2 flex-wrap">
+                @foreach (var slot in conflictResponse.AlternativeSlots)
+                {
+                    <button class="btn btn-outline-primary" @onclick="() => SelectAlternativeSlot(slot)">
+                        @slot.Start.ToString("HH:mm") - @slot.End.ToString("HH:mm")
+                    </button>
+                }
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private BookingRequest bookingRequest = new();
+    private DateTime selectedDate = DateTime.Today;
+    private TimeSpan? selectedStartTime;
+    private int duration = 30;
+    private List<FreeSlot> availableSlots = new();
+    private string errorMessage = string.Empty;
+    private string successMessage = string.Empty;
+    private bool isSubmitting = false;
+    private string imagePreview = string.Empty;
+    private ConflictResponse? conflictResponse;
+    private bool isGettingLocation = false;
+    private string locationStatus = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetCurrentLocation();
+        await LoadAvailableSlots();
+    }
+
+    private async Task LoadAvailableSlots()
+    {
+        if (!string.IsNullOrEmpty(bookingRequest.Resource))
+        {
+            availableSlots = await ApiService.GetFreeSlotsAsync(selectedDate, duration, bookingRequest.Resource, "America/Sao_Paulo");
+            StateHasChanged();
+        }
+    }
+
+    private async Task OnResourceChanged()
+    {
+        await LoadAvailableSlots();
+    }
+
+    private async Task OnDateChanged()
+    {
+        await LoadAvailableSlots();
+    }
+
+    private async Task HandleFileSelected(InputFileChangeEventArgs e)
+    {
+        var file = e.File;
+        if (file != null)
+        {
+            if (file.Size > 1024 * 1024)
+            {
+                errorMessage = "Arquivo deve ter no máximo 1MB";
+                return;
+            }
+
+            var buffer = new byte[file.Size];
+            await file.OpenReadStream(1024 * 1024).ReadAsync(buffer);
+
+            var base64 = Convert.ToBase64String(buffer);
+            bookingRequest.RetratoBase64 = $"data:{file.ContentType};base64,{base64}";
+            imagePreview = bookingRequest.RetratoBase64;
+        }
+    }
+
+    private async Task GetCurrentLocation()
+    {
+        isGettingLocation = true;
+        locationStatus = "Obtendo localização...";
+        StateHasChanged();
+
+        try
+        {
+            if (GeolocationService != null)
+            {
+                var position = await GeolocationService.GetCurrentPositionAsync();
+                if (position != null)
+                {
+                    bookingRequest.Latitude = position.Latitude;
+                    bookingRequest.Longitude = position.Longitude;
+                    locationStatus = $"Localização obtida: {position.Latitude:F6}, {position.Longitude:F6}";
+                }
+                else
+                {
+                    locationStatus = "Não foi possível obter a localização";
+                }
+            }
+            else
+            {
+                locationStatus = "GeolocationService não disponível";
+            }
+        }
+        catch (Exception ex)
+        {
+            locationStatus = $"Erro: {ex.Message}";
+        }
+        finally
+        {
+            isGettingLocation = false;
+            StateHasChanged();
+        }
+    }
+
+    private async Task HandleSubmit()
+    {
+        if (selectedStartTime == null)
+        {
+            errorMessage = "Selecione um horário";
+            return;
+        }
+
+        isSubmitting = true;
+        errorMessage = string.Empty;
+        successMessage = string.Empty;
+        conflictResponse = null;
+        imagePreview = null;
+
+        try
+        {
+            bookingRequest.Start = selectedDate.Add(selectedStartTime.Value);
+            bookingRequest.End = bookingRequest.Start.AddMinutes(duration);
+
+            var result = await ApiService.CreateBookingAsync(bookingRequest, "America/Sao_Paulo");
+
+            if (result != null)
+            {
+                successMessage = $"Reserva criada com sucesso! ID: {result.Id}";
+                bookingRequest = new BookingRequest();
+                await LoadAvailableSlots();
+            }
+        }
+        catch (BookingConflictException ex)
+        {
+            conflictResponse = ex.ConflictResponse;
+        }
+        catch (Exception ex)
+        {
+            errorMessage = ex.Message;
+        }
+        finally
+        {
+            isSubmitting = false;
+        }
+    }
+
+    private void SelectAlternativeSlot(TimeSlot slot)
+    {
+        selectedStartTime = slot.Start.TimeOfDay;
+        duration = (int)(slot.End - slot.Start).TotalMinutes;
+        conflictResponse = null;
+    }
+}
